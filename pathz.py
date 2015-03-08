@@ -1,7 +1,37 @@
 
 # coding: utf-8
 
-# In[ ]:
+# In[12]:
+
+import random
+
+
+# In[13]:
+
+rancol = random.choice([0.4, 0.5, 0.6])
+
+
+# In[14]:
+
+ranmor = rancol + 0.2
+
+
+# In[15]:
+
+ranlor = ranmor - 0.2
+
+
+# In[17]:
+
+ranmor
+
+
+# In[18]:
+
+ranlor
+
+
+# In[1]:
 
 #!/usr/bin/python3
 #+
@@ -32,9 +62,9 @@ pix = qah.ImageSurface.create   (
     dimensions = round(Vector(640, 420))
   )
 g = qah.Context(pix)
-g.set_source_rgb(.2, .5, .5)
+g.set_source_rgb(rancol, ranlor, ranmor)
 g.paint()
-g.set_source_rgb(.8, 1, .8)
+g.set_source_rgb(ranmor, rancol, rancol)
 g.set_font_size(font_size)
 
 pos = Vector(80, font_size * line_spacing / 1)
