@@ -1,9 +1,11 @@
 
 # coding: utf-8
 
-# In[12]:
+# In[20]:
 
 import random
+import os
+import getpass
 
 
 # In[13]:
@@ -19,6 +21,26 @@ ranmor = rancol + 0.2
 # In[15]:
 
 ranlor = ranmor - 0.2
+
+
+# In[21]:
+
+usrna = getpass.getuser()
+
+
+# In[22]:
+
+usrna
+
+
+# In[23]:
+
+qahpath = ('/home/' + usrna + '/qah')
+
+
+# In[24]:
+
+qahpath
 
 
 # In[17]:
@@ -86,7 +108,7 @@ for font_name in font_names :
 
 
 pix.flush()
-pix.write_to_png("%s.png" % os.path.basename(sys.argv[0]))
+pix.write_to_png(qahpath + "/logo.png")
 
 
 # In[ ]:
